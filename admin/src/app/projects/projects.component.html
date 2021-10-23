@@ -1,0 +1,137 @@
+<div class="main-content">
+
+  <div class="page-content">
+    <div class="container-fluid">
+
+      <!-- start page title -->
+      <div class="row">
+        <div class="col-12">
+          <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0 font-size-18">Projects</h4>
+            <div class="page-title-right">
+              <ol class="breadcrumb m-0">
+                <li class="breadcrumb-item">
+                  <button type="button" class="btn btn-primary waves-effect waves-light" data-bs-toggle="modal"
+                    data-bs-target=".bs-example-modal-center">Add Project</button>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <table datatable [dtOptions]="dtOptions" style="width: 100%;" class="table table-bordered dataTable">
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade bs-example-modal-center" id="addProjectModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Add Project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form role="form" [formGroup]="projectAddForm" (ngSubmit)="projectAddForm.valid && addProject()">
+          <div class="mb-3">
+            <label class="form-label" for="formrow-firstname-input">Name</label>
+            <input type="text" class="form-control" id="formrow-firstname-input" name="name" formControlName="name">
+            <div *ngIf="projectAddForm.get('name')!.errors && isSubmitted">
+              <span *ngIf="projectAddForm.get('name')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-desc-input">Description</label>
+            <input type="text" class="form-control" id="formrow-desc-input" name="short_description"
+              formControlName="short_description">
+            <div *ngIf="projectAddForm.get('short_description')!.errors && isSubmitted">
+              <span *ngIf="projectAddForm.get('short_description')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-area-input">Total area</label>
+            <input type="text" class="form-control" id="formrow-area-input" name="total_area"
+              formControlName="total_area">
+            <div *ngIf="projectAddForm.get('total_area')!.errors && isSubmitted">
+              <span *ngIf="projectAddForm.get('total_area')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-price-input">Total price</label>
+            <input type="text" class="form-control" id="formrow-price-input" name="total_price"
+              formControlName="total_price">
+            <div *ngIf="projectAddForm.get('total_price')!.errors && isSubmitted">
+              <span *ngIf="projectAddForm.get('total_price')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-model-input">resource</label>
+            <input type="file" (change)="onFileChanged($event)" class="form-control" id="formrow-resource-input" name="resource"
+              formControlName="resource">
+            <div *ngIf="projectAddForm.get('resource')!.errors && isSubmitted">
+              <span *ngIf="projectAddForm.get('resource')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary w-md" (click)="isSubmitted=true">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- User Edit Form -->
+<!-- <div class="modal fade bs-example-modal-center" id="editUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Edit User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form role="form" [formGroup]="projectEditForm" (ngSubmit)="projectEditForm.valid && updateUser()">
+          <div class="mb-3">
+            <label class="form-label" for="formrow-firstnameedit-input">Name</label>
+            <input type="text" class="form-control" id="formrow-firstnameedit-input" name="name" formControlName="name">
+            <div *ngIf="projectEditForm.get('name')!.errors && isSubmitted1">
+              <span *ngIf="projectEditForm.get('name')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-emailedit-input">Email</label>
+            <input type="text" class="form-control" id="formrow-emailedit-input" name="email" formControlName="email">
+            <div *ngIf="projectEditForm.get('email')!.errors && isSubmitted1">
+              <span *ngIf="projectEditForm.get('email')!.errors!.required" class="text-danger">Required!
+              </span>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="formrow-passwordedit-input">Password</label>
+            <input type="text" class="form-control" id="formrow-passwordedit-input" name="password"
+              formControlName="password">
+          </div>
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary w-md" (click)="isSubmitted1=true">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->

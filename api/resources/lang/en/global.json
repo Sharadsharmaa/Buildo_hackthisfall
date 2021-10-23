@@ -1,0 +1,11 @@
+{
+    "internal_server_error": "Internal Server Error",
+    "invalid_credentials": "Invalid Email or Password",
+    "INTERNAL_SERVER_ERROR":"INTERNAL SERVER ERROR",
+    "email_already_exist":"email_already_exist",
+    "email_or_mobile_already_exist":"Email or Mobile already Exist",
+    "invalid_email":"Please enter a valid Email!",
+    "password_reset_link":"Password reset link has been sent to Email",
+    "password_reset_successfully":"Password has been changed successfully",
+    "logged_out_successful":"Successfully Logout"
+}

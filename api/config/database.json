@@ -1,0 +1,24 @@
+{
+    "development": {
+        "host": "cluster0.qn6nt.mongodb.net",
+        "port": 27017,
+        "user": "root",
+        "password": "nFOJZ3xpH4c211Kb",
+        "database": "buildo"
+    },
+    "test": {
+        "host": "localhost",
+        "user": "root",
+        "port":27017,
+        "password": "buildo#123",
+        "database": "buildo"
+
+    },
+    "production": {
+        "host": "localhost",
+        "port":27017,
+        "user": "root",
+        "password": "buildo@cliq",
+        "database": "buildo"
+    }
+}

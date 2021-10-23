@@ -1,0 +1,15 @@
+{
+    "environment": "development",
+    "port": "3001",
+    "secretKey":"SXYUSDETLVFRPDSEA",
+    "emailUser":"",
+    "emailPassword":"",
+    "adminResetPasswordLink":"http://172.16.16.205:3001/reset-password/",
+    "accessKeyId":"F4C1EF48D0A4084B55C2",
+    "secretAccessKey":"MJTxBcrNONGLGlPdb1qxTV9znnKxuIMUYlWZnX0R",
+    "Bucket":"buildo",
+    "region":"us-east-1",
+    "s3_url":"https://s3.filebase.com/",
+    "bucketURL":"https://buildo.s3.filebase.com/"
+
+}

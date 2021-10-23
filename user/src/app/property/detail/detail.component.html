@@ -1,0 +1,128 @@
+
+<div class="container1">
+    <h2 style="margin-top:50px">Property Details</h2>
+    <canvas id="renderCanvas">
+    </canvas>
+
+    <div class="lets_start_full" *ngIf="modelLoadingProgress !== 100">
+        <a href="javascript:void(0)" style="color: aliceblue;text-decoration: none;" class="lets_start_btn">
+            Loading {{modelLoadingProgress.toFixed(2)}}%
+        </a>
+
+        
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6" id="profile">
+            <div class="card hvr-shutter-out-horizontal">
+                <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold; font-style: 'Nunito';">Tabish Shaikh</h5>
+                    <p class="card-text">Tabish Shaikh has detailed knowledge of Hillcrest in Najafgarh, New Delhi
+                        NCR. Place a call for free assistance.</p>
+                    <a href="tel:+919009009000" class="btn btn-outline-primary" style="font-weight: bold;">Contact
+                        Saler</a>
+                </div>
+            </div>
+            <div  class="card-body">
+                <button type="button" [routerLink]="['/property/ar-view']" class="btn btn-warning btn-lg" role="button" style='margin-right:30px'><b>View in AR</b></button>
+                <button type="button" class="btn btn-warning btn-lg" style='margin-right:20px'><b>360 View</b></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-10" id="profile">
+            <div class="card hvr-shutter-out-horizontal">
+                <div class="card-body">
+                    <div class="card-body">
+                        <h4 class="card-title">About The Property</h4>
+                        <p style ="color:#999" class="card-text">Live Iconic : Here is to those who never compromise on dreams, 
+                            those who set trends rather than following them, Icons to be precise. 
+                            Welcome to Asha Icon, where every structure is a landmark, every home a culmination of ideas. 
+                            When you live in the Iconic city Mumbai, make sure you live it that way.
+                             Like an Icon. Asha Icon, an exclusive project located on Kalyan Shill Road, 
+                             Dombivli offers 1,2 & 3 BHK Super Luxurious Apartments. 
+                             These apartments are designed especially for the few who are looking for something unique
+                              and contemporary for their family. 
+                              It has all the elements to give you a grand lifestyle and quality living at the same address.</p>
+                      </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <br>
+                <br>
+                <h1><b>₹24 LACS* </b></h1>
+                    <p>-inclusive of all taxes*</p>
+          </div>
+          <div class="flip-card-back">
+              <br>
+            <h1 style="color:white">Specifications</h1>
+            <p>2BHK</p>
+            <p>With Valcony </p>
+            <p>Attached Bathrooms </p>
+          </div>
+        </div>
+      </div>
+
+      
+    <canvas id="renderCanvas">
+    </canvas>
+    
+    <div class="card-columns" style="margin-top:-290px;">
+        <div class="card">
+          <img class="card-img-top" src="/assets/img/build22.jpeg" alt="Card image cap" >
+          <div class="card-body">
+            <h2 class="card-title">HIGHLIGHTS</h2>
+            <h4 class="card-title">&diams;LIFESTYLE ...the grand way of living!</h4>
+            <p class="card-text">
+                One aspires to live the way he dreams and at Asha Icon,
+                 we strive to convert your dreams into reality. 
+                 At our new creation, we have an elegant architecture that will please your eyes and 
+                 spacious apartments that will take care of your comfort. 
+                 The amenities are also specially designed to suit the lifestyle of Kings, Queens and You.
+            </p>
+            <h4 class="card-title">&diams;CLASSIC ...only known to the connoisseur!</h4>
+            <p class="card-text">
+                A home should confer pride on its owner as a throne brings to its king.
+                 We have designed our new project Asha Icon to bring you pride, joy and gratification that you
+                  always aspired. We present you a magnificence which is an epitome of class, quality and luxury!
+            </p>
+            <h4 class="card-title">&diams;A realm of grandeur embedded with elegance.</h4>
+            <p class="card-text">
+                A signature of imperialism for the fortunate few.
+            </p>
+            <h4 class="card-title">&diams;Quality ...simply, passion at work!</h4>
+            <p class="card-text">
+                The Ashapura believes in developing and constructing aesthetically designed, functionally efficient residential 
+                and commercial complexes of international quality, offering “more value for money”. 
+                We believe our buildings should reflect engineering excellence with a view to provide
+                 complete customer satisfaction. It is our intention that the quality of our products 
+                 and services should result in complete value for our clients. While rendering our 
+                 construction services, we emphasize on Environmental, Health and Safety (EHS) standards 
+                 as an integral part of our business practices.
+            </p>
+
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <canvas id="renderCanvas">
+        </canvas>
+        <div class="card p-3 text-right">
+          <blockquote class="blockquote mb-0">
+            <p><b>ACCESSIBILITY</b></p>
+          </blockquote>
+          <div class="card">
+            <img class="card-img" src="/assets/img/build11.jpeg" alt="Card image" >
+          </div>
+        </div>
+      </div>
+      
+
+</div>
+<div id="map"></div>
