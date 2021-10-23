@@ -1,4 +1,245 @@
-#map {
+@import url("https://fonts.googleapis.com/css?family=Lato:300,700");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+}
+
+body {
+  background-color: #ededed;
+  padding: 25px 75px 25px 50px;
+}
+
+.hero {
+  position: relative;
+  min-height: 500px;
+  margin-bottom: 40px;
+}
+
+.hero__map {
+  position: absolute;
+  height: 500px;
+  width: 900px;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border-radius: 18px;
+  background: url("https://maps.google.com/maps?q=new%20delhi&t=&z=5&ie=UTF8&iwloc=&output=embed");
+  -webkit-box-shadow: black 0px 5px 15px;
+          box-shadow: black 0px 5px 15px;
+}
+
+.hero__search_wrapper {
+  position: relative;
+  width: 450px;
+  background-color: white;
+  top: 75px;
+  left: -20px;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.hero__search_wrapper__header {
   width: 100%;
-  height: 600px;
+  font-weight: 700;
+  font-size: 36px;
+  color: #efc62f;
+}
+
+.hero__search_wrapper__searchbar_wrapper {
+  margin-top: 30px;
+}
+
+.hero__search_wrapper__searchbar_wrapper p {
+  background-color: transparent;
+  color: #707070;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.hero__search_wrapper__searchbar {
+  width: 120%;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: 46px;
+  position: relative;
+  padding: 5px;
+}
+
+.hero__search_wrapper__searchbar input {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  display: block;
+  width: 80%;
+  border: none;
+  border-bottom: 2.5px solid black;
+  font-size: 22px;
+  padding-bottom: 2.5px;
+  font-weight: 700;
+}
+
+.hero__search_wrapper__searchbar input:focus {
+  outline: none;
+}
+
+.hero__search_wrapper__searchbar button {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+}
+
+.hero__search_wrapper__searchbar button span {
+  font-size: 30px;
+}
+
+.hero__search_wrapper__suggestion {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  font-weight: 700;
+  color: #707070;
+  text-transform: uppercase;
+}
+
+.hero__search_wrapper__suggestion .bar {
+  background: black;
+  width: 3.5px;
+  height: 41px;
+}
+
+.hero__search_wrapper__suggestion div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+}
+
+.hero__search_wrapper__suggestion div span {
+  color: black;
+  text-transform: none;
+  font-size: 22px;
+  margin-top: 5px;
+}
+
+.content__handpicked, .content__top, .content__promoted {
+  padding: 20px;
+}
+
+.content__handpicked__carousel_wrapper, .content__top__carousel_wrapper, .content__promoted__carousel_wrapper {
+  padding: 20px 0 20px 0;
+  background: white;
+  width: 85%;
+  overflow: visible;
+}
+
+.content__handpicked__carousel_wrapper p:first-child, .content__top__carousel_wrapper p:first-child, .content__promoted__carousel_wrapper p:first-child {
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  color: #efc62f;
+}
+
+.content__handpicked__carousel, .content__top__carousel, .content__promoted__carousel {
+  width: 100%;
+  padding-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+  text-align: center;
+}
+
+.content__handpicked__carousel li, .content__top__carousel li, .content__promoted__carousel li {
+  width: 220px;
+  margin-right: 10px;
+  -webkit-box-shadow: #707070 2px 0 15px;
+          box-shadow: #707070 2px 0 15px;
+  background: white;
+}
+
+.content__handpicked__carousel li img, .content__top__carousel li img, .content__promoted__carousel li img {
+  width: 200px;
+  padding: 10px;
+}
+
+.content__handpicked__carousel li .place, .content__top__carousel li .place, .content__promoted__carousel li .place {
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.content__handpicked__carousel li .location, .content__top__carousel li .location, .content__promoted__carousel li .location {
+  color: #bfbfbf;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.content__handpicked__carousel li .cost, .content__top__carousel li .cost, .content__promoted__carousel li .cost {
+  padding-top: 15px;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+.content__offer {
+  position: relative;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  -webkit-box-shadow: #bfbfbf 5px -5px 10px, #bfbfbf 5px 5px 10px;
+          box-shadow: #bfbfbf 5px -5px 10px, #bfbfbf 5px 5px 10px;
+}
+
+.content__offer h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.content__offer p {
+  font-size: 22px;
+  color: black;
+}
+
+.content__offer button {
+  border-radius: 8px;
+  background: #efc62f;
+  color: white;
+  font-size: 26px;
+  border: 0px;
+  padding: 10px 32px 10px 32px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
 }
