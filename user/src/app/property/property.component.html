@@ -1,6 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buildo - Property</title>
 
-<div *ngFor="let building of buildings">
-  {{building |json}}
-</div>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
 
+<section class="hero">
+    <div class="hero__map">
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="900" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=new%20delhi&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org">123movies</a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:900px;}</style><a href="https://www.embedgooglemap.net">google maps iframe generator</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:900px;}</style></div></div>
+    </div>
 <div id="map"></div>
+
+    <div class="hero__search_wrapper">
+        <div class="hero__search_wrapper__header">
+            <p>Buildo</p>
+        </div>
+        <div class="hero__search_wrapper__searchbar_wrapper">
+            <p>Choose your desired address</p>
+
+            <form class="hero__search_wrapper__searchbar" method="post">
+                <input type="text" name="property_search" placeholder="Eg. Delhi" autocomplete="off"/>
+                <button type="submit"><span class="material-icons">search</span></button>
+            </form>
+
+            <div class="hero__search_wrapper__suggestion">
+                <div class="hero_search_wrapper__suggestion__project">
+                    Total Project <span>99</span>
+                </div>
+                <div class="bar"></div>
+                <div class="hero_search_wrapper__suggestion__average">
+                    Average Price <span>Rs. 1000/sqft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content">
+    <div class="content__handpicked">
+        <div class="content__handpicked__carousel_wrapper">
+            <p>handpicked for you</p>
+
+            <ul class="content__handpicked__carousel">
+                <li class="content__handpicked__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__handpicked__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__handpicked__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__handpicked__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__handpicked__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content__top">
+        <div class="content__top__carousel_wrapper">
+            <p>top projects in delhi</p>
+
+            <ul class="content__top__carousel">
+                <li class="content__top__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__top__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__top__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__top__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__top__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content__promoted">
+        <div class="content__promoted__carousel_wrapper">
+            <p>promoted projects in delhi</p>
+
+            <ul class="content__promoted__carousel">
+                <li class="content__promoted__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__promoted__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__promoted__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__promoted__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+
+                <li class="content__promoted__carousel__option">
+                    <img class="thumbnail" src="https://lh3.googleusercontent.com/sWtjCHZGv5ompRpZH3ss4ksUVXOvz1EhZ85RwAHE80hpbFT2IeWcHL-WuKJ2x4ojaovs8H0ssOIlzPV5C3Uh=w350" alt="picture of our project"/>
+                    <p class="place">someplace</p>
+                    <p class="location">somewhere</p>
+                    <p class="cost">Rs. 9999</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content__offer">
+        <h1>Exclusive offer for Buildo customers</h1>
+        <p>Get home loans for your purchase at a very low interest rate from your nearest bank.</p>
+
+        <button type="button">know more</button>
+    </div>
+</section>
+    
+</body>
+</html>
