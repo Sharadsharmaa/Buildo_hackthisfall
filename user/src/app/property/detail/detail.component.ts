@@ -52,11 +52,12 @@ export class DetailComponent implements OnInit {
     sessionStorage.setItem("model", this.modelPath)
     this.renderModel();
     let property_id;
-    this.route.params.subscribe(params => {
+   /* this.route.params.subscribe(params => {
       property_id = params['type'];
     });
-    this.getBuildingDetail(property_id)
+    /*this.getBuildingDetail(property_id)*/
   }
+    
 
   getBuildingDetail(_id:any){
     this.spinner.start();

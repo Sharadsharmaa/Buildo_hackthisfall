@@ -8,7 +8,7 @@ import { ArViewComponent } from './ar-view/ar-view.component';
 const routes: Routes = [
   { path: '', component: PropertyComponent },
   { path: 'panoramic-view',data: { header: false, footer: false }, component: PanoramicViewComponent },
-  { path: 'detail/:id',data: { header: true, footer: false }, component: DetailComponent },
+  { path: 'detail',data: { header: true, footer: true }, component: DetailComponent },
   { path: 'ar-view',data: { header: false, footer: false }, component: ArViewComponent }
 ];
 
